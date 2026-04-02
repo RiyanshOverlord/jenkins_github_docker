@@ -10,6 +10,7 @@ pipeline{
       steps{
         bat 'docker build -t mywebsite .'
       }
+    }
       stage('Stop old image'){
         steps{
           bat 'docker stop mycont || exit 0'
@@ -24,4 +25,5 @@ pipeline{
       }
     }
   }
-}
+
+
