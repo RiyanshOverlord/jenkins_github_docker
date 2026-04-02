@@ -23,6 +23,12 @@ pipeline{
           bat 'docker run -d -p 7000:80 --name mycont mywebsite'
         }
       }
+    stage('push on hub')
+    {
+      steps{
+        bat 'docker push riyansh7/mywebsite:ver1'
+      }
+    }
     }
   }
 
